@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"> <span>Shopping</span> List</a>
+        </div>
+
+
+        <div class="menu">
+            <form class="search" onsubmit="Menu.search(event)">
+                <input type="text" id="search" placeholder="Search for a product" autocomplete="off">
+                <div class="fas fa-search" onclick="Menu.search(event)"></div>
+            </form>
+
+        
+            <i class="fas fa-bell" id="bell"></i>
+            
+            <i class="fas fa-shopping-cart" id="shop-cart"></i>
+       
+
+            <div class="profile">
+                <div class="picture">
+                    <i class="fas fa-user" id="user"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="icon-toggle" onclick="Menu.show()">
+            <div class="bar one"></div>
+            <div class="bar two"></div>
+            <div class="bar three"></div>
+        </div>
+
+    </header>
+
+    <main id=container>
+                
+        <section class="products">
+            <div class="summary">
+                <div class="total">
+                    <h2>TOTAL</h2>
+                    <p id="total">R$ 0,00</p>
+                </div>
+                
+                <div class="assets">
+                    <form action="" onsubmit="Assets.submit(event)">
+                        <select id="sort">
+                            <option value="D">Default</option>
+                            <option value="HP">Highest Price</option>
+                            <option value="LP">Lowest Price</option>
+                        </select>
+                        <button>Sort</button>
+                    </form>
+                    <i class="far fa-trash-alt" id="trash" onclick="Assets.clearAll()"></i>
+                </div>
+            </div>
+        </section>
+        
+        <section id="table">
+            <table id="table-products">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+            
+            <button class="button-new" onclick="Modal.open()">+ Add Product</button>       
+        </main>
+
+
+        <div class="overlay">
+            <modal class="modal">
+                
+                <h2>New Product</h2>
+                <form action="" id="form-products" onsubmit="Form.submit(event)">                  
+                    <label for="product">Name</label>
+                    <input type="text" id="label" name="product" placeholder="Product" autocomplete="off">
+                    
+                    <label for="price">Price</label>
+                    <input type="number" id="price" name="price" placeholder="0,00"  autocomplete="off" step=".01">
+
+                    <div class="actions">
+                        <a href="#" class="button cancel" onclick="Modal.close()">Cancel</a>
+                        <button class="button save">Save</button>
+                    </div>
+                </form>
+            </modal>
+        </div>
+        
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>

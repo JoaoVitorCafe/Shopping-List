@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color:#BDDDDD;
+    height: 100%;
+}
+
+
+/*HEADER */
+
+header {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid lightgray;
+    justify-content: space-between;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .logo a {
+    font-family: 'Meddon' , 'sans-serif';
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo a span {
+    color: #32BA6B;
+}
+
+header .logo i {
+    font-size: 2rem;
+    margin: 1rem;
+    color: white;
+}
+
+header .menu {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    align-items: center;
+}
+
+header .search input {
+    padding: 1rem 10rem;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+
+}
+
+header .search div {
+    position: absolute;
+    font-size: 2rem;
+    margin: 1rem -2.5rem;
+    color: #5B6173;   
+    cursor: pointer;
+}
+
+
+header  .fas {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+header #shop-cart p {
+    background-color: tomato;
+    color: #fff;
+    display: inline-block;
+    width: 1rem;
+    height: 1.7rem;
+    font-size: 1.5rem;
+    font-weight: lighter;    
+    text-align: center;
+    border-radius: 1rem;
+}
+
+header #bell div {
+    background: red;
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 1rem;
+    float: right;
+}
+
+
+ header .profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+header .profile .picture {
+    border-radius: 50%;
+    background-color: lightslategray;
+    padding: 1.5rem 2rem;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+header .icon-toggle {
+    cursor: pointer;
+    display: none;
+    margin-right: 1rem;
+}
+
+header .icon-toggle .bar {
+    background-color: orangered;
+    margin-bottom: 2.5px;
+    width: 2rem;
+    height: 0.5rem;
+    transition: all ease-in-out 0.3s;
+}
+
+header .icon-toggle.active .one {
+    transform: rotate(45deg) translate(1px , 7px);
+}
+
+header .icon-toggle.active .two {
+    opacity: 0;
+}
+
+header .icon-toggle.active .three {
+    transform: rotate(-45deg) translate(4px , -9px)
+}
+
+/* MAIN */
+
+main#container {
+    height: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+/* PRODUCT  */
+
+#container .products .summary {
+    background-color: #fff;
+    display: flex;
+    justify-content :space-between;
+    padding: 2rem 0rem;
+    margin-bottom: 1rem;
+}
+
+#container .products .summary .quantity{
+    display: flex;
+    align-items: center;
+}
+
+#container .products .total{
+    color: #264147;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+
+#container .products .summary .assets{
+    display: flex;
+    margin-right: 2rem;
+    align-items: center;
+}
+
+
+#container .products .summary .assets button{
+    padding: 1rem;
+    background-color :aquamarine ;
+    border-radius: 0.5rem;
+    border: 0;
+    cursor: pointer;
+}
+
+#container .products .summary #sort{
+    background-color: lightgrey;
+    margin-right: 1rem;
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+#container .products .summary #trash{
+    font-size: 2rem;
+    color: red;
+    cursor: pointer;
+    margin-left: 1rem;
+    }
+
+
+/* TABLE */
+
+#table-products {
+    width: 95%;
+    color: #6B7370;;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    border-spacing: 0rem;
+    border-radius: 2rem 10rem 0rem 0rem;
+    margin: auto;
+}
+
+#table-products thead :first-child {
+    border-top-left-radius: 1rem;
+}
+#table-products thead :last-child {
+   border-top-right-radius: 1rem;
+}
+
+#table-products tbody :last-child :first-child {
+    border-bottom-left-radius: 1rem;
+}
+
+#table-products tbody :last-child :last-child {
+    border-bottom-right-radius: 1rem;
+}
+
+#table-products thead th{
+    background: #fff;
+    padding: 2rem 0rem;
+    text-align: center;
+    margin-right: 10rem;
+}
+
+#table-products tbody td {
+    padding: 1.5rem 0rem;
+    background: #fff;
+    text-align: center;
+}
+
+#table-products .fa-times {
+    color: red;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+
+#table-products tbody tr {
+    opacity: 1;
+}
+
+#table-products  tbody tr:hover {
+    opacity: 0.7;
+}
+
+/* BUTTON */
+
+
+.button-new {
+    background-color: #3dd705;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bolder;
+    border: 0;
+    align-self: flex-end;
+}
+
+.button-new:hover {
+    background-color: #41FC28;
+}
+
+#amount .button-new:focus {
+    outline-color: whitesmoke;
+}
+
+
+/* MODAL & OVERLAY */
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;    
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible ;
+}
+
+
+.overlay .modal {
+    background: #F0F2F5;
+    padding: 2.4rem;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+
+}
+
+.modal h2 {
+    color: #264147;
+    padding: 3rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+
+.modal label {
+    font-size: 2rem;
+    font-weight: bolder;
+
+}
+
+
+.modal input {
+    display: block;
+    padding: 1rem;
+    border: 0;
+    border-radius: 1rem;
+    width: 90%;
+    margin: 2rem 0 2rem;
+}
+
+.modal .actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal .actions .button {
+    padding: 1.5rem 3.5rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.button.cancel {
+    background-color: #FC3A28 ;
+}
+
+.button.save {
+    background: #3dd705;
+    border: solid 1px  #3dd705;
+}
+
+/*MEDIA QUERY*/
+
+@media(max-width: 930px) {
+    
+    header .logo h1 {
+        font-size: 2rem;
+    }
+
+    header form {
+        margin-top: 3rem;
+    }
+
+
+    header .search input {
+        margin-top: 0.5rem;
+        padding: 1rem 6rem;
+    }
+    
+    header .profile {
+        display: block;
+    }
+
+    header .icon-toggle {
+        display: block;
+    }
+
+    header .menu > div {
+        margin : 3rem ;
+    }
+
+    header .menu {
+        position: fixed;
+        top: 0;
+        transform: translateX(100%);
+        width: 100%;
+        height: 100vh;
+        background-color: #549A7A;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: initial ;
+    }
+
+    header .menu.active{
+        transform: translateX(0);
+    }
+
+    header .menu .fa-bell{
+        margin : 2rem 0rem;
+    }
+
+
+    #container .products .total {
+        font-size: 1.5rem;
+    }
+
+    #container .products .summary .assets form {
+        text-align: center;
+    }
+
+    #container .products .summary .assets button{
+        margin-top: 1rem;
+    }
+
+    .modal .actions .button{
+        padding: 1rem 2rem;
+    }
+
+}
+
+
