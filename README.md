@@ -14,7 +14,7 @@ IF YOU WANT TO TAKE A LOOK AND USE THIS APPLICATION CLICK [HERE](https://webshop
 This is a small responsive application  that can help you list all products you intend to buy in any place.
 
 ## OBSERVATIONS ABOUT THIS PROJECT
-- There isn't functionality of login/register
+- There isn't any functionality of login/register
 
 ## FUNCTIONALITIES 
 
